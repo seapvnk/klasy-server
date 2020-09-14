@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(['prefix' => 'api'], function()
+{
+  Route::get('/', function (){
+    return response()->json(['message' => 'Klasy API',
+                             'status' => 'Connected']);
+  });
+
+  Route::resource('users', 'UsersController');
+  Route::resource('keys', 'KeysController');
+});
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('api');
 });
