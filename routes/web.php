@@ -20,8 +20,6 @@ Route::group(['prefix' => 'api'], function()
                              'status' => 'Connected']);
   });
 
-  Route::resource('users', 'UsersController');
-  Route::resource('keys', 'KeysController');
 });
 
 

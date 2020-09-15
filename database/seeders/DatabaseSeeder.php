@@ -14,9 +14,5 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      // User::factory(10)->create()
-      Model::unguard();
-      $this->call(UserSeeder::class);
-      Model::reguard();
     }
 }
